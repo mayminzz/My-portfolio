@@ -1,3 +1,4 @@
+
 // header toggle 버튼
 const gnb = document.querySelector(".gnb");
 const menu = document.querySelector(".menu");
@@ -18,6 +19,7 @@ $("header a ").click(function (e) {
   $.scrollTo(this.hash || 0, 1500);
   e.preventDefault();
 });
+
 
 // contact
 const myName = document.querySelector("#name");

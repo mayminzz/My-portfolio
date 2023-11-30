@@ -100,6 +100,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .barcode {
   position: absolute;
@@ -686,12 +687,11 @@ input[id="tab3"]:checked ~ .tabs {
 .project_inner {
   width: 96%;
   margin: 0 auto;
-  height: 90vh;
+  height: 92vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 180px 400px 359px;
-  margin-top: 70px;
-  border: 1px solid #222;
+  grid-template-rows: 180px 39.7% 39.7%;
+  margin-top: 60px;
 }
 .project_header {
   height: 80%;
@@ -747,7 +747,7 @@ input[id="tab3"]:checked ~ .tabs {
   flex-direction: row;
   align-items: flex-start;
   gap: 30px;
-  margin-top: -40px;
+  margin-top: -37px;
   padding: 40px;
   border-bottom: 1px solid #222;
 }
@@ -800,7 +800,7 @@ input[id="tab3"]:checked ~ .tabs {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding-left: 40px;
+  padding: 40px;
   border-right: 1px solid #222;
 }
 #project .kakao img {
@@ -852,7 +852,7 @@ input[id="tab3"]:checked ~ .tabs {
 #project .apple img {
   order: 1;
   width: 400px;
-  height: 100%;
+  height: 80%;
   flex: 1;
   object-fit: cover;
   object-position: top;
@@ -1062,11 +1062,15 @@ nav li:nth-child(2):hover a::before {
     position: relative;
   }
   header {
+    background: url(./img_project/AdobeStock_248310678.jpeg)
+    center center no-repeat;
     width: 100%;
-    margin: 0 auto;
   }
   .logo a {
     font-size: 30px;
+  }
+  .gnb_inner {
+    padding: 0 30px;
   }
   .gnb .menu {
     background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
@@ -1116,7 +1120,7 @@ nav li:nth-child(2):hover a::before {
     display: block;
     position: absolute;
     top: 22px;
-    right: 0px;
+    right: 30px;
     transition: 0.5s;
   }
   .trigger span {
@@ -1280,7 +1284,7 @@ nav li:nth-child(2):hover a::before {
 
   @keyframes slideright {
     0% {
-      transform: translateX(-25%);
+      transform: translateX(-20%);
     }
     100% {
       transform: translateX(0%);
@@ -1292,7 +1296,7 @@ nav li:nth-child(2):hover a::before {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-25%);
+      transform: translateX(-20%);
     }
   }
   .top_img img,
@@ -1368,7 +1372,7 @@ nav li:nth-child(2):hover a::before {
     height: 250vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 140px 390px 390px 390px 390px ;
+    grid-template-rows: 140px 390px 420px 390px 390px ;
     border: none;
   }
   .project_header {
@@ -1398,6 +1402,7 @@ nav li:nth-child(2):hover a::before {
     border-right: none;
   }
   #project .naver img {
+    width: 550px;
     height: 300px;
   }
   #project .aesop {
@@ -1407,7 +1412,7 @@ nav li:nth-child(2):hover a::before {
   }
   #project .aesop img {
     width: 360px;
-    height: 300px;
+    height: 320px;
   }
 
   .aesop .aesop_desc span:nth-last-of-type(1) {
@@ -1437,7 +1442,7 @@ nav li:nth-child(2):hover a::before {
   }
   .kakao_desc h1,
   .apple_desc h1 {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 0;
   }
   .kakao_desc span,
@@ -1447,9 +1452,15 @@ nav li:nth-child(2):hover a::before {
     margin-bottom: 0;
     color: #787878;
   }
+  .aesop_desc p {
+    font-size: 17px;
+    color: #000;
+  }
+  .naver_desc p,
   .kakao_desc p,
   .apple_desc p {
     font-size: 19px;
+    color: #000;
   }
   #project .apple {
     width: 100%;
@@ -1961,7 +1972,7 @@ nav li:nth-child(2):hover a::before {
 @media all and (min-width: 380px) and (max-width: 767px) {
   .content {
     width: 100%;
-    height: 310vh;
+    height: 250vh;
     background-repeat: repeat;
     background-size: contain;
     position: relative;
@@ -2044,6 +2055,7 @@ nav li:nth-child(2):hover a::before {
   }
   .home_inner {
     width: 84%;
+    height: 100vh;
     margin: 0 auto;
     text-align: center;
   }
@@ -2077,7 +2089,7 @@ nav li:nth-child(2):hover a::before {
 
   /* about */
   #about.cd-section {
-    height: 105vh;
+    height: 120vh;
   }
   .about_inner {
     width: 84%;
@@ -2134,7 +2146,7 @@ nav li:nth-child(2):hover a::before {
 
   /* favorite */
   #favorite.cd-section {
-    height: 100vh;
+    height: 110vh;
   }
   .favorite_inner {
     width: 100%;
@@ -2207,9 +2219,11 @@ nav li:nth-child(2):hover a::before {
     object-position: center;
   }
   /* timeline */
+  .timeline.cd-section {
+    height: 110vh;
+  }
   .timeline_inner {
     width: 100%;
-    height: 100vh;
   }
   .timeline_aside {
     display: none;
@@ -2264,7 +2278,10 @@ nav li:nth-child(2):hover a::before {
   /* project */
   #project.cd-section {
     width: 100%;
-    height: 300vh;
+    height: 330vh;
+  }
+  #project .content {
+    height: 330vh;
   }
   .project_inner {
     width: 100%;
